@@ -3,8 +3,9 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.1.3.
 
 # angular2-acl plugin
+npm i angular2-acl --save
 1. Install the plugin to add acl services and import in app.module.ts
-  npm i angular2-acl --save
+  
 2. Create acl data for users to give access permissions (Constants.ts file).
 3. After login add user role to service.
 4. In header html file check user role and display links based on role
