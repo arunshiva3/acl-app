@@ -21,7 +21,7 @@ export class AclResolver implements Resolve<any> {
      */
   resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): void {
     if (route.url[0].path != 'login') {
-      this.localStorage.getItem('role').subscribe((role) => {
+      this.localStorage.getItem('role').subscribe((role: string) => {
         if(role){
           if(!this.aclData[role].includes(route.url[0].path)){
             this.router.navigate(['noPageFound']);
@@ -29,7 +29,6 @@ export class AclResolver implements Resolve<any> {
         }
       });
     } else {
-      console.log(route.url[0].path);
       this.aclService.flushRoles();
       this.localStorage.clear();
     }
