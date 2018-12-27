@@ -10,9 +10,9 @@ npm i angular2-acl --save
 3. After login add user role to service.
 4. In header html file check user role and display links based on role
 5. If user navigates from browser to an admin's tab we use AclResolver to resolve before loading the component. If the user with role has permission we allow to load the component else we redirect to page not found.
-6. To login as admin ==>   { username: admin
+6. To login as admin ==>   { username: admin,
                       password: admin }
-               user ==>  { username: user
+               user ==>  { username: user,
                     password: user }
 
 
